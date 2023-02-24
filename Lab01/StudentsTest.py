@@ -29,6 +29,4 @@ class Test(unittest.TestCase):
         self.assertEqual(self.students.get_name(mex),"There is no such user")
         print(f'id {mex} : {self.students.get_name(mex)}')
         print("\nFinish get_name test")
-
-#  if __name__ == '__main__': 
-#      unittest.main()        
+      
