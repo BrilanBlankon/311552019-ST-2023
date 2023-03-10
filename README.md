@@ -7,6 +7,6 @@
 
 ![lab01 workflow](https://github.com/BrilanBlankon/311552019-ST-2023/actions/workflows/Lab01-CI.yml/badge.svg)
 
-![lab02 workflow](https://github.com/BrilanBlankon/311552019-ST-2023/actions/workflows/Lab02-Cl.yml/badge.svg)
+![lab02 workflow](https://github.com/BrilanBlankon/311552019-ST-2023/actions/workflows/Lab02-CI.yml/badge.svg)
 
-![lab03 workflow](https://github.com/BrilanBlankon/311552019-ST-2023/actions/workflows/Lab03-Cl.yml/badge.svg)
+![lab03 workflow](https://github.com/BrilanBlankon/311552019-ST-2023/actions/workflows/Lab03-CI.yml/badge.svg)
