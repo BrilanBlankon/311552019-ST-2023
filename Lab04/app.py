@@ -10,7 +10,7 @@ if __name__ == '__main__':
     options.add_argument('--headless')
     options.add_argument('--window-size=1920,1080')
     options.add_argument('--disable-gpu')
-    driver = webdriver.Chrome(service=ChromeService(
+    driver = webdriver.Chrome(service=Service(
         ChromeDriverManager().install()), options=options)
 
     # launch browser, navigate to NYCU home page, and maximize the window
@@ -44,8 +44,9 @@ if __name__ == '__main__':
     search_box.submit()
 
     # print the title of second result
-    results = driver.find_elements(By.XPATH, "//h3")
-    print(results[2].text)
+    results = driver.find_elements(
+        By.XPATH, "//h3[@class='LC20lb MBeuO DKV0Md']")
+    print(results[1].text)
 
     # close the brower
     driver.close()
