@@ -27,7 +27,7 @@ if __name__ == '__main__':
 
     # print title and content
     element = driver.find_element(
-        By.XPATH, "//h1[@class='single-post-title entry-title']")
+        By.XPATH, "//h1[@class='single-post-title']")
     print(element.text)
     elements = driver.find_elements(By.XPATH, "//p")
     for e in elements:
