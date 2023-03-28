@@ -12,3 +12,5 @@
 ![lab03 workflow](https://github.com/BrilanBlankon/311552019-ST-2023/actions/workflows/Lab03-CI.yml/badge.svg)
 
 ![lab04 workflow](https://github.com/BrilanBlankon/311552019-ST-2023/actions/workflows/Lab04-CI.yml/badge.svg)
+
+![lab05 workflow](https://github.com/BrilanBlankon/311552019-ST-2023/actions/workflows/Lab05-CI.yml/badge.svg)
