@@ -12,6 +12,7 @@ public:
 
   bool doInitialization(Module &M) override;
   bool runOnModule(Module &M) override;
+  bool runOnFunction(Function &F);
 };
 
 } // namespace llvm
