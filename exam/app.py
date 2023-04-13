@@ -25,6 +25,10 @@ if __name__ == '__main__':
     # element = wait.until(EC.visibility_of(driver.find_element(By.XPATH, "//select[@id='language_select']")))
     # select = Select(element)
     # select_menu.select_by_value("zh-tw") 
+    wait = WebDriverWait(driver, 20)
+    select_element = wait.until(EC.visibility_of_element_located((By.XPATH, '/html/body/div[2]/ul/li[7]/div[1]/select')))
+    select = Select(select_element)
+    select.select_by_value('zh-tw')
 
     # use find_element to get the title and the first paragraph. Print the title and the first paragraph.
     element = driver.find_element(By.XPATH, "//h1")
