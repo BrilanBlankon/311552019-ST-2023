@@ -41,8 +41,7 @@ if __name__ == '__main__':
     # Find the search box on the navigation bar, and send keys to search for class
     input_box = wait.until(EC.visibility_of_element_located((By.XPATH, '/html/body/div[2]/ul/li[11]/div/form/input[1]')))
     input_box.send_keys('class')
-    go = driver.find_element(By.XPATH, "//input[@value='Go']")
-    go.click()
+    input_box.send_keys(Keys.ENTER)
 
     # Please use implicit or explicit wait in Selenium to wait for the searching result, and print the top five listed titles
     driver.implicitly_wait(5)
