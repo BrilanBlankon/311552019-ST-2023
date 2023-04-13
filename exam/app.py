@@ -31,13 +31,11 @@ if __name__ == '__main__':
     select.select_by_value('zh-tw')
 
     # use find_element to get the title and the first paragraph. Print the title and the first paragraph.
-    element = driver.find_element(By.XPATH, "//h1")
-    print(element.text)
-    elements = driver.find_elements(By.XPATH, "//p")
-    for e in elements:
-        if (e.text != ""):
-            print(e.text)
-            break
+    title = wait.until(EC.visibility_of_element_located((By.XPATH, '//*[@id="the-python-tutorial"]/h1')))
+    print(title.text)
+    text = wait.until(EC.visibility_of_element_located((By.XPATH, '/html/body/div[3]/div[1]/div/div/section/p[1]')))
+    print(text.text)
+
     
     # Q2-2
     # Find the search box on the navigation bar, and send keys to search for class
@@ -48,15 +46,17 @@ if __name__ == '__main__':
 
     # Please use implicit or explicit wait in Selenium to wait for the searching result, and print the top five listed titles
     driver.implicitly_wait(5)
-    elements = driver.find_elements(By.XPATH, "//li/a")
-    idx = 0
-    for e in elements:
-        if (e.text == ""):
-            continue
-        if (idx == 5):
-            break
-        print(e.text)
-        idx += 1
+    result = wait.until(EC.visibility_of_element_located((By.XPATH, '/html/body/div[3]/div[1]/div/div/div[1]/ul/li[1]/a')))
+    print(result.text)
+    result = wait.until(EC.visibility_of_element_located((By.XPATH, '/html/body/div[3]/div[1]/div/div/div[1]/ul/li[2]/a')))
+    print(result.text)
+    result = wait.until(EC.visibility_of_element_located((By.XPATH, '/html/body/div[3]/div[1]/div/div/div[1]/ul/li[3]/a')))
+    print(result.text)
+    result = wait.until(EC.visibility_of_element_located((By.XPATH, '/html/body/div[3]/div[1]/div/div/div[1]/ul/li[4]/a')))
+    print(result.text)
+    result = wait.until(EC.visibility_of_element_located((By.XPATH, '/html/body/div[3]/div[1]/div/div/div[1]/ul/li[5]/a')))
+    print(result.text)
+
 
     # close the brower
     driver.close()
