@@ -39,7 +39,7 @@ if __name__ == '__main__':
     
     # Q2-2
     # Find the search box on the navigation bar, and send keys to search for class
-    input_box = driver.find_element(By.XPATH, "//input[@name='q']")
+    input_box = wait.until(EC.visibility_of_element_located((By.XPATH, '/html/body/div[2]/ul/li[11]/div/form/input[1]')))
     input_box.send_keys('class')
     go = driver.find_element(By.XPATH, "//input[@value='Go']")
     go.click()
