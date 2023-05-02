@@ -94,10 +94,12 @@ int main() {
 
 ### Valgrind
 ![](https://i.imgur.com/tnqZCb8.png)
+
 $\Rightarrow$ **DO NOT FIND** the problem of global out-of-bounds
 
 ### ASAN
 ![](https://i.imgur.com/iXkPsfY.png)
+
 $\Rightarrow$ **DO FIND** the problem of global out-of-bounds
 
 ## Use-after-free
@@ -117,10 +119,12 @@ int main() {
 
 ### Valgrind
 ![](https://i.imgur.com/7cIqUGg.png)
+
 $\Rightarrow$ **DO FIND** the problem of use-after-free
 
 ### ASAN
 ![](https://i.imgur.com/Fw4VQRt.png)
+
 $\Rightarrow$ **DO FIND** the problem of use-after-free
 
 ## Use-after-return
@@ -140,10 +144,12 @@ int main(int argc, char **argv) {
 > [source](https://github.com/google/sanitizers/wiki/AddressSanitizerExampleUseAfterReturn)
 ### Valgrind
 ![](https://i.imgur.com/AgfQHZA.png)
+
 $\Rightarrow$ **DO FIND** the problem of use-after-return
 
 ### ASAN
 ![](https://i.imgur.com/lOmTLs7.png)
+
 $\Rightarrow$ **DO FIND** the problem of use-after-return
 
 ## stack buffer overflow
@@ -162,4 +168,5 @@ int main() {
 ```
 ### ASAN
 ![](https://i.imgur.com/i1vp3jl.png)
+
 $\Rightarrow$ **DO NOT FIND**
