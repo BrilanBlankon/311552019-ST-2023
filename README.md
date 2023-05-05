@@ -15,4 +15,6 @@
 
 ![lab05 workflow](https://github.com/BrilanBlankon/311552019-ST-2023/actions/workflows/Lab05-CI.yml/badge.svg)
 
+![lab08 workflow](https://github.com/BrilanBlankon/311552019-ST-2023/actions/workflows/Lab08-CI.yml/badge.svg)
+
 ![Midterm workflow](https://github.com/BrilanBlankon/311552019-ST-2023/actions/workflows/Midterm-CI.yml/badge.svg)
