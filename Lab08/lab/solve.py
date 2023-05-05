@@ -6,16 +6,6 @@ main_addr = 0x4011a9
 find_addr = 0x401371
 avoid_addr = 0x40134d
 
-
-def handle_scanf_real_input(raw_input):
-    idx = 0
-    for c in raw_input:
-        if c == ord('\n') or c == ord('\0'):
-            break
-        idx += 1
-    return raw_input[:idx]
-
-
 class my_scanf(angr.SimProcedure):
     def run(self, format_string, dest):
         simfd = self.state.posix.get_fd(sys.stdin.fileno())
@@ -40,10 +30,8 @@ if simgr.found:
         for i in range(15):
             _input = simgr.found[0].posix.dumps(
                 sys.stdin.fileno())[i*0x4:(i+1)*0x4]
-            print(f'x{i}: ', int.from_bytes(handle_scanf_real_input(
-                _input), byteorder='little', signed=True))
-            f.write(str(int.from_bytes(handle_scanf_real_input(
-                _input), byteorder='little', signed=True)))
+            print(f'x{i}: ', int.from_bytes(_input, byteorder='little', signed=True))
+            f.write(str(int.from_bytes(_input, byteorder='little', signed=True)))
             f.write('\n')
 else:
     print('Failed')
