@@ -24,7 +24,6 @@ simgr.explore(find=find_addr, avoid=avoid_addr)
 if simgr.found:
     _input = simgr.found[0].posix.dumps(sys.stdin.fileno())
     print(_input)
-    print(handle_scanf_real_input(_input))
 
     with open(file='solve_input', mode='w') as f:
         for i in range(15):
